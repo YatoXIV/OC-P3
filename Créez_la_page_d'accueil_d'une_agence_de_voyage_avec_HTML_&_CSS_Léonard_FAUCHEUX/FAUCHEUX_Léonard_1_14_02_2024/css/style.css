@@ -352,7 +352,7 @@ a {
     }
 }
 
-.header-filters {
+.filters {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -364,7 +364,7 @@ a {
 
 
 @media (max-width: 1023.98px) {
-    .header-filters {
+    .filters {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -373,7 +373,7 @@ a {
 }
 
 @media (max-width: 767.98px) {
-    .header-filters {
+    .filters {
         height: 161px;
         width: 100%;
     }
@@ -381,14 +381,14 @@ a {
 
 
 
-.header-filters-title,
-.header-filters-options {
+.filters-title,
+.filters-options {
     display: flex;
     gap: 15px;
 }
 
 @media (max-width: 1023.98px) {
-    .header-filters-title {
+    .filters-title {
         width: 100%;
         position: relative;
         top: 0;
@@ -397,13 +397,13 @@ a {
 }
 
 @media (max-width: 1023.98px) {
-    .header-filters-options {
+    .filters-options {
         width: 668px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .header-filters-options {
+    .filters-options {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -413,11 +413,11 @@ a {
     }
 }
 
-.header-filters h2 {
+.filters h2 {
     font-size: 18px;
 }
 
-.header-filters-row {
+.filters-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -428,34 +428,34 @@ a {
 }
 
 @media (max-width: 767.98px) {
-    .header-filters-row {
+    .filters-row {
         width: 100%;
     }
 }
 
 
-.header-filters-options h2 {
+.filters-options h2 {
     padding: 15px 19px 15px 0;
     white-space: nowrap;
     font-size: 17px;
 }
 
 @media (max-width: 1023.98px) {
-    .header-filters-options h2 {
+    .filters-options h2 {
         font-size: 16px;
         padding: 15.5px 19px 15.5px 0;
     }
 }
 
 @media (max-width: 767.98px) {
-    .header-filters-options h2 {
+    .filters-options h2 {
         font-size: 14px;
         padding-top: max(17px, 34%);
         padding-bottom: max(17px, 34%);
     }
 }
 
-.header-filters-row:hover {
+.filters-row:hover {
     background-color: #deebff;
     transition: 0.15s;
 }
@@ -472,31 +472,31 @@ a {
 }
 
 
-.header-filters-row:nth-child(2) {
+.filters-row:nth-child(2) {
     padding-left: 4px;
 }
 
 @media (max-width: 767.98px) {
-    .header-filters-row:nth-child(2) {
+    .filters-row:nth-child(2) {
         padding-left: 0;
         padding-right: 18.5px;
     }
 }
 
-.header-tooltip {
+.info-icon {
     height: 24px;
     display: flex;
     align-items: center;
 }
 
 @media (max-width: 767.98px) {
-    .header-tooltip {
+    .info-icon {
         height: 38px;
         width: 100%;
     }
 }
 
-.header-tooltip-icon {
+.info-icon-icon {
     height: 24px;
     width: 24px;
     min-width: 24px;
@@ -508,7 +508,7 @@ a {
 
 }
 
-.header-tooltip p {
+.info-icon p {
     padding-left: 10px;
 }
 

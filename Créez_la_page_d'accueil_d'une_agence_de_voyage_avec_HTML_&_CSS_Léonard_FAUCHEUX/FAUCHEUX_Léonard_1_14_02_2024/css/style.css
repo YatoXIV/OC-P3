@@ -13,6 +13,10 @@
     text-rendering: optimizeLegibility;
 }
 
+.element {
+    overflow-x: hidden;
+  }
+
 .fa-solid {
     color: var(--main-color);
 }
@@ -29,6 +33,11 @@ body {
     overflow-x: hidden;
 }
 
+.container {
+    max-width: 100%; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
 .main-container {
     width: 100%;
     max-width: 1440px;
@@ -36,7 +45,7 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
 
-    /*----------------------------------- CENTER CONTAINER -----------------------------------*/
+    /* Center the container*/
 }
 
 @media (max-width: 1023.98px) {
@@ -58,7 +67,7 @@ a {
     text-decoration: none;
 }
 
-/*----------------------------------- HEADER NAV BAR -----------------------------------*/
+/* __________ HEADER - NAVBAR ___________ */
 
 .header-navbar {
     height: 79px;
@@ -187,7 +196,7 @@ a {
 }
 
 
-/*----------------------------------- HEADER MAIN -----------------------------------*/
+/* __________ HEADER -  MAIN SECTION ___________ */
 
 .header-main-section {
     margin: 30px 0 35px 0;
@@ -352,7 +361,7 @@ a {
     }
 }
 
-.filters {
+.header-filters {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -364,7 +373,7 @@ a {
 
 
 @media (max-width: 1023.98px) {
-    .filters {
+    .header-filters {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -373,7 +382,7 @@ a {
 }
 
 @media (max-width: 767.98px) {
-    .filters {
+    .header-filters {
         height: 161px;
         width: 100%;
     }
@@ -381,14 +390,14 @@ a {
 
 
 
-.filters-title,
-.filters-options {
+.header-filters-title,
+.header-filters-options {
     display: flex;
     gap: 15px;
 }
 
 @media (max-width: 1023.98px) {
-    .filters-title {
+    .header-filters-title {
         width: 100%;
         position: relative;
         top: 0;
@@ -397,13 +406,13 @@ a {
 }
 
 @media (max-width: 1023.98px) {
-    .filters-options {
+    .header-filters-options {
         width: 668px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .filters-options {
+    .header-filters-options {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -413,11 +422,11 @@ a {
     }
 }
 
-.filters h2 {
+.header-filters h2 {
     font-size: 18px;
 }
 
-.filters-row {
+.header-filters-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -428,34 +437,34 @@ a {
 }
 
 @media (max-width: 767.98px) {
-    .filters-row {
+    .header-filters-row {
         width: 100%;
     }
 }
 
 
-.filters-options h2 {
+.header-filters-options h2 {
     padding: 15px 19px 15px 0;
     white-space: nowrap;
     font-size: 17px;
 }
 
 @media (max-width: 1023.98px) {
-    .filters-options h2 {
+    .header-filters-options h2 {
         font-size: 16px;
         padding: 15.5px 19px 15.5px 0;
     }
 }
 
 @media (max-width: 767.98px) {
-    .filters-options h2 {
+    .header-filters-options h2 {
         font-size: 14px;
         padding-top: max(17px, 34%);
         padding-bottom: max(17px, 34%);
     }
 }
 
-.filters-row:hover {
+.header-filters-row:hover {
     background-color: #deebff;
     transition: 0.15s;
 }
@@ -472,31 +481,31 @@ a {
 }
 
 
-.filters-row:nth-child(2) {
+.header-filters-row:nth-child(2) {
     padding-left: 4px;
 }
 
 @media (max-width: 767.98px) {
-    .filters-row:nth-child(2) {
+    .header-filters-row:nth-child(2) {
         padding-left: 0;
         padding-right: 18.5px;
     }
 }
 
-.info-icon {
+.header-tooltip {
     height: 24px;
     display: flex;
     align-items: center;
 }
 
 @media (max-width: 767.98px) {
-    .info-icon {
+    .header-tooltip {
         height: 38px;
         width: 100%;
     }
 }
 
-.info-icon-icon {
+.header-tooltip-icon {
     height: 24px;
     width: 24px;
     min-width: 24px;
@@ -508,7 +517,7 @@ a {
 
 }
 
-.info-icon p {
+.header-tooltip p {
     padding-left: 10px;
 }
 
@@ -516,7 +525,9 @@ a {
     font-size: 10px;
 }
 
-/*----------------------------------- MAIN -----------------------------------*/
+/* __________ END OF HEADER ___________*/
+
+/* ____________ MAIN CONTENT ___________ */
 
 .hebergements {
     display: flex;
@@ -623,7 +634,7 @@ a {
     color: var(--main-bg-color);
 }
 
-/*----------------------------------- HEBERGEMENTS ET POPULAIRES -----------------------------------*/
+/****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -643,12 +654,12 @@ a {
     box-sizing: border-box;
 }
 
-/*----------------------------------- HEBERGEMENTS -----------------------------------*/
+/****** Hebergements ***********/
 .hebergements {
     width: 65%;
 }
 
-/*----------------------------------- POPULAIRES -----------------------------------*/
+/****** Populaires ***********/
 .populaires {
     width: 32%;
 }
@@ -776,9 +787,25 @@ a {
     .populaires-cards a {
         width: 100%;
     }
+
+    .hebergements a:nth-child(6) {
+        order: 1;
+    }
+
+    .hebergements a:nth-child(2) {
+        order: 5;
+    }
+
+    .hebergements a:nth-child(4) {
+        order: 1;
+    }
+
+    .hebergements a:nth-child(3) {
+        order: 1;
+    }
 }
 
-/*----------------------------------- ACTIVITES -----------------------------------*/
+/* ______________ ACTIVITES _______________ */
 
 .activites {
     margin-top: 35px;
@@ -893,16 +920,16 @@ a {
     }
 }
 
-/*----------------------------------- FOOTER -----------------------------------*/
+/*_________________ FOOTER _________________ */
 
-.footer {
+.booki-footer {
     width: 100%;
     height: 163px;
     background-color: #F2F2F2;
     display: flex;
 }
 
-.footer ul {
+.booki-footer ul {
 
     height: 100%;
     list-style: none;
@@ -922,19 +949,19 @@ a {
     row-gap: 15px;
 }
 
-.footer h3 {
+.booki-footer h3 {
     font-weight: bold;
     font-size: 18px;
 }
 
-.footer section {
+.booki-footer section {
     width: 33.33%;
     height: 100%;
     padding: 20px 0 20px 20px;
 }
 
 @media (max-width: 767.98px) {
-    .footer {
+    .booki-footer {
         display: flex;
         flex-direction: column;
         height: 461px;
@@ -944,17 +971,29 @@ a {
         padding: 30px;
     }
 
-    .footer ul {
+    .booki-footer ul {
         justify-content: unset;
         row-gap: 15px;
     }
 
-    .footer section {
+    .booki-footer section {
         width: 100%;
         height: 100%;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .booki-footer section:nth-child(1) {
+        height: 123px;
+    }
+
+    .booki-footer section:nth-child(2) {
+        height: 89px;
+    }
+
+    .booki-footer section:nth-child(3) {
+        height: 89px;
     }
 }

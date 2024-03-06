@@ -13,10 +13,6 @@
     text-rendering: optimizeLegibility;
 }
 
-.element {
-    overflow-x: hidden;
-  }
-
 .fa-solid {
     color: var(--main-color);
 }
@@ -33,19 +29,12 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 100%; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container */
-}
-
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
     margin: 0 auto;
-
-    /* Center the container*/
 }
 
 @media (max-width: 1023.98px) {
